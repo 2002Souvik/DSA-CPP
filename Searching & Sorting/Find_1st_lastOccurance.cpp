@@ -74,6 +74,6 @@ int main()
     int lastOccIndex = -1;
     findLastOccurence(arr, n, target, lastOccIndex);
     cout << "Last Occ Index: " << lastOccIndex << endl;
-    cout << "Total no of Occ: " << lastOccIndex - firstOccIndex +1;
+    cout << "Total no of Occ: " << lastOccIndex - firstOccIndex +1 << endl;
     return 0;
 }
