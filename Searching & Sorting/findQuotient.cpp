@@ -19,7 +19,7 @@ int getQuotient(int dividend, int divisor) {
     //
     int s = 0;
     int e = dividend;
-    int mid = s + ((e-s)>>1);
+    int mid = s + ((e-s)>>1);  /// "/2" & ">>1" same
     int ans = -1;
 
     while(s <= e){
