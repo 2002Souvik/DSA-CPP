@@ -11,12 +11,10 @@ public:
 
         for (int i = 0; i < n; i++) {
             char currChar = s[i];
-            if (ans.empty()) { // If empty, push the character
+            if (ans.empty() || currChar != ans.back()) { // If empty, push the character
                 ans.push_back(s[i]);
             } else if (currChar == ans.back()) { // If rightmost char is equal, pop it
                 ans.pop_back();
-            } else {
-                ans.push_back(currChar);
             }
         }
         return ans;
