@@ -72,13 +72,14 @@ int main() {
     cout << fib(5) << endl; // 5
     cout << pow(5) << endl; // 32
     printCounting(5); // 5 4 3 2 1
+    cout << endl;
     
     // int n;
     // cout << "Enter the value of n: " ;
     // cin >> n;
 
-    // int ans = getFactorial(n);
-    // cout << "Factorial of " << n << " is: " << ans << endl;
+    int ans = getFactorial(3);
+    cout << "Factorial of " << "3" << " is: " << ans << endl;
 
 
     return 0;
