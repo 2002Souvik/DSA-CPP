@@ -1,32 +1,49 @@
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
 
-void print(vector<int> &v){
-    for(int i=0; i<v.size(); i++){
-        cout << v[i] <<" ";
-    }
-    cout << endl;
-}
-
-void selectionSort(vector<int> &v){
-    int n = v.size();
-    for(int i = 0; i<n-1; i++){
-        int minIndx = i ; // ith element hi smallest hai
-        for(int j=i+1; j<n; j++){
-            if(v[j] > v[minIndx]){
-                minIndx = j;
+class Solution {
+public: 
+    // Function to perform selection sort on an array
+    // Time Complexity: O(n^2) where n is the number of elements in the array
+    vector<int> selectionSort(vector<int>& nums) {
+        int size = nums.size();
+        for (int i = 0; i < size - 1; i++) {
+            int mini = i;
+            for (int j = i + 1; j < size; j++) {
+                if (nums[j] < nums[mini]) {
+                    mini = j;
+                }
             }
+            // swap(nums[i], nums[mini]); // Swap the found minimum element with the first element of the unsorted part
+            // Swap nums[i] and nums[mini]
+            int temp = nums[i]; 
+            nums[i] = nums[mini];
+            nums[mini] = temp;
         }
-
-        swap(v[i], v[minIndx]); // swap ith and minindex element
+        return nums;
     }
-}
+
+    void printArray(const vector<int>& arr) {
+        for (int i = 0; i < arr.size(); i++) {
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+    }
+};
 
 int main() {
-    vector<int> v = {44, 33, 55, 22, 11};
-    selectionSort(v);
-    print(v);
+    vector<int> arr = {64, 25, 12, 22, 11};
+
+    Solution sol;
+
+    cout << "Original array: ";
+    sol.printArray(arr);
+
+    vector<int> sortedArr = sol.selectionSort(arr);
+
+    cout << "Sorted array: ";
+    sol.printArray(sortedArr);
+
     return 0;
 }
-
