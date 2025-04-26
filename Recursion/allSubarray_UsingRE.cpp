@@ -24,6 +24,9 @@ void printSubarray(vector<int> &arr) {
     }
 }
 
+// space complexity: O(n)
+// time complexity: O(n^3) because we are using 2 loops, one for start and one for end index
+
 int main() {
     vector<int> arr = {1, 2, 3, 4, 5};
     printSubarray(arr);
