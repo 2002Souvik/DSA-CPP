@@ -47,6 +47,10 @@ int merge(int arr[], int s, int e, int mid) {
     while(rightIndex < rightSize) {
         arr[margeArrIndex++] = rightArr[rightIndex++];
     }
+
+    // delete the temporary arrays
+    delete [] leftArr; // free the memory allocated for left array
+    delete [] rightArr; // free the memory allocated for right array
 }
 
 void mergeSort(int arr[], int s, int e) {
