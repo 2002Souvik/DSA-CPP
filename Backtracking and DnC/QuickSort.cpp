@@ -16,7 +16,7 @@ void quickSort(int a[], int start, int end) {
         }
         ++j;
     }
-    ++i;
+    ++i; // i is the right position for the pivot element
     swap(a[i], a[pivot]); // Swap the pivot element with the element at the smaller element pointer
     // Now, the pivot is in its correct position, and all elements to the left are smaller than the pivot
 
