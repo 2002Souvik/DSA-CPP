@@ -24,7 +24,7 @@ class Solution {
                 first = arr[i];  // Update first largest
             } 
             // Check if the element is greater than second and not equal to first
-            else if (arr[i] > second && arr[i] != first) {
+            else if (arr[i] > second && arr[i] != first) {  //or, else if (num > secondMax && num < firstMax)
                 second = arr[i];
             }
         }
